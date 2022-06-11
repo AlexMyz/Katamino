@@ -1,0 +1,49 @@
+body {
+    /* background-color: #96C3F8; */
+    background-image: url(/img/start-screen/bg.png);
+    background-size: cover;
+    width: 100%;
+}
+
+.greet-scr {
+    position: relative;
+    width: 455px;
+    height: 170px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.greet-scr p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 240px;
+    text-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
+}
+
+.log a{
+    cursor: pointer;
+    position: absolute;
+    font-family: 'Imprima', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
+    bottom: 0;
+}
+.log a:hover {
+    bottom: 5px;
+    box-shadow: 8px 15px 4px rgb(0, 0, 0, 0.06);
+}
+.login-btn{
+    padding: 20px 70px;
+    left: 0;
+}
+.signin-btn {
+    padding: 20px 65px;
+    right: 0;
+}
