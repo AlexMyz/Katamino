@@ -1,10 +1,32 @@
 body {
-    /* background-color: #96C3F8; */
-    background-image: url(/img/start-screen/bg.png);
+    background-color: #96C3F8; 
+    /* background-image: url(/img/start-screen/bg.png); */
     background-size: cover;
     width: 100%;
+    position: relative;
+}
+.fig {
+    position: absolute;
 }
 
+.fig1 {
+    top: 180px;
+    left: 250px;
+}
+.fig2 {
+    top: 180px;
+    right: 250px;
+}
+.fig3 {
+    width: 180px;
+    top: -180px;
+    right: 240px;
+}
+.fig4 {
+    width: 150px;
+    top: -180px;
+    left: 200px;
+}
 .greet-scr {
     position: relative;
     width: 455px;

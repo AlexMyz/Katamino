@@ -15,12 +15,19 @@ include "configs/db.php";
 	<title>Katamino</title>
 </head>
 <body>
+	<div class="figures">
+		<img class="fig fig1" src="/img/start-screen/fig-1.png" alt="">
+		<img class="fig fig2" src="/img/start-screen/fig-3.png" alt="">
+		<img class="fig fig3" src="/img/start-screen/fig-2.png" alt="">
+		<img class="fig fig4" src="/img/start-screen/fig-4.png" alt="">
+	</div>
 	<div class="greet-scr">
-		<p>Katamino</p>
+		<p class="game-name">Katamino</p>
 		<div class="log">
 			<a href="#" class="btn signin-btn">Sign In</a>
 			<a href="#" class="btn login-btn">Login</a>
 		</div>
 	</div>
+	<script src="/js/script.js"></script>
 </body>
 </html>
