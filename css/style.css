@@ -7,30 +7,45 @@ body {
 }
 .fig {
     position: absolute;
+    /* box-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1); */
+    background-color: #89B6EA;
 }
 
 .fig1 {
+    padding: 100px 100px;
     top: 180px;
     left: 250px;
 }
 .fig2 {
+    padding: 90px 90px;
     top: 180px;
     right: 250px;
 }
 .fig3 {
-    width: 180px;
+    padding: 70px 70px;
     top: -180px;
     right: 240px;
 }
 .fig4 {
-    width: 150px;
+
+    padding: 80px 80px;
     top: -180px;
     left: 200px;
 }
+.fig5 {
+    padding: 50px 50px;
+    top: -150px;
+    left: 600px;
+}
+.fig6 {
+    padding: 40px 40px;
+    bottom: -150px;
+    right: 600px;
+}
 .greet-scr {
     position: relative;
-    width: 455px;
-    height: 170px;
+    width: 480px;
+    height: 180px;
     text-align: center;
     margin: 0 auto;
 }
@@ -44,7 +59,7 @@ body {
     text-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
 }
 
-.log a{
+.log-btns a{
     cursor: pointer;
     position: absolute;
     font-family: 'Imprima', sans-serif;
@@ -57,7 +72,7 @@ body {
     box-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
     bottom: 0;
 }
-.log a:hover {
+.log-btns a:hover {
     bottom: 5px;
     box-shadow: 8px 15px 4px rgb(0, 0, 0, 0.06);
 }

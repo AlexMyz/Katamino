@@ -12,23 +12,30 @@ include "configs/db.php";
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
-	
-	<title>Katamino</title>
+
+	<title>PUZZLE ME</title>
+
 </head>
 <body>
 	<div class="figures">
-		<img class="fig fig1" src="/img/start-screen/fig-1.png" alt="">
-		<img class="fig fig2" src="/img/start-screen/fig-3.png" alt="">
-		<img class="fig fig3" src="/img/start-screen/fig-2.png" alt="">
-		<img class="fig fig4" src="/img/start-screen/fig-4.png" alt="">
+
+		<div class="fig fig1"></div>
+		<div class="fig fig2"></div>
+		<div class="fig fig3"></div>
+		<div class="fig fig4"></div>
+		<div class="fig fig5"></div>
+		<div class="fig fig6"></div>
+
+
 	</div>
 	<div class="greet-scr">
-		<p class="game-name">Katamino</p>
-		<div class="log">
-			<a href="#" class="btn signin-btn">Sign Up</a>
+		<p class="game-name">PUZZLE ME</p>
+		<div class="log-btns">
+			<a href="signup-form.php" class="btn signin-btn">Sign Up</a>
 			<a href="login-form.php" class="btn login-btn">Login</a>
 		</div>
 	</div>
 	<script src="/js/script.js"></script>
+	
 </body>
 </html>
