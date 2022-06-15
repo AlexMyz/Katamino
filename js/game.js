@@ -1,5 +1,5 @@
 //секундомір
-minutesCount = 0,secondCount = 0,centiSecondCount = 0
+minutesCount = 0,secondCount = 0,
 minutes = document.getElementById('minutes')
 second = document.getElementById('second')
 //початок відрахунку
@@ -18,13 +18,6 @@ function startSW(){
 		}
 		second.innerHTML = secondCount
 	},1000);
-	centiSecondSetInterval = setInterval(function(){
-		centiSecondCount += 1
-		if(centiSecondCount > 99){
-			centiSecondCount = 1
-		}
-		centiSecond.innerHTML = centiSecondCount
-	},10);
 }
 //пауза
 function pauseSW(){
@@ -32,7 +25,6 @@ function pauseSW(){
 	$("#pauseCount").attr({"disabled":"disabled"})
 	clearInterval(minutesSetInterval)
 	clearInterval(secondSetInterval)
-	clearInterval(centiSecondSetInterval)
 }
 //обнулення
 function restartSW(){
@@ -42,11 +34,9 @@ function restartSW(){
 
 	clearInterval(minutesSetInterval)
 	clearInterval(secondSetInterval)
-	clearInterval(centiSecondSetInterval)
-	minutesCount = 0,secondCount = 0,centiSecondCount = 0
+	minutesCount = 0,secondCount = 0
 	minutes.innerHTML = minutesCount
 	second.innerHTML = secondCount
-	centiSecond.innerHTML = centiSecondCount
 }
 // file = '';
 // function radioget(getValue) {
@@ -124,7 +114,7 @@ $(function(){
 		  	"position": "absolute",
 		  	"z-index": "1000"
 		  });
-
+		  console.log("1");
 
 		  $(document.body).append(this)
 
