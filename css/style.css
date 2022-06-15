@@ -50,7 +50,7 @@ body {
     margin: 0 auto;
 }
 
-.greet-scr p {
+.game-name {
     font-family: 'Roboto', sans-serif;
     font-size: 90px;
     text-transform: uppercase;

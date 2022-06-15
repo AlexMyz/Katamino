@@ -9,27 +9,32 @@
     <link rel="stylesheet" type="text/css" href="css/game.css">
 
 
-    <title>Katamino</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/game.js"></script>
+
+    <title>PUZZLE ME</title>
     <?php require('configs/connect.php');?>
     
 </head>
 <body>
-    <a class="logout" href="logout.php">Вихід</a>
-    <?php
-        if(isset($_SESSION['user_id']) && $_SESSION['user_id'] != null) {
-            $sql = "SELECT username FROM user WHERE id = " . $_SESSION['user_id'] . "";
-            $result = mysqli_query($conn, $sql);
-            $user = $result->fetch_assoc();
-            ?>
-        <h1>Hello, <?=$user['username']?></h1>
-    <?php } ?>
-    <div class="wrapper">
-        <h4 class="timer">*timer*</h4>
-        <div id="game">
-            <div id="board"></div>
-            <div id="pieces"></div>
-        </div>
+    <div class="header">
+        <?php
+            if(isset($_SESSION['user_id']) && $_SESSION['user_id'] != null) {
+                $sql = "SELECT username FROM user WHERE id = " . $_SESSION['user_id'] . "";
+                $result = mysqli_query($conn, $sql);
+                $user = $result->fetch_assoc();
+                ?>
+            <h4 class="username">Привіт, <?=$user['username']?></h4>
+        <?php } ?>
+        <h1 class="game-name">PUZZLE ME</h1>
+        <a class="logout-btn" href="logout.php">Вихід</a>
     </div>
-    <script src="js/game.js"></script>
+
+    <div class="main">
+	<span class="timer">
+        Час: 15:50
+    </span>	
+	</div>
 </body>
 </html>

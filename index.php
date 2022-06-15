@@ -32,7 +32,7 @@ include "configs/db.php";
 		<p class="game-name">PUZZLE ME</p>
 		<div class="log-btns">
 			<a href="signup-form.php" class="btn signin-btn">Sign Up</a>
-			<a href="login-form.php" class="btn login-btn">Login</a>
+			<a href="login-form.php" class="btn login-btn">Log In</a>
 		</div>
 	</div>
 	<script src="/js/script.js"></script>
