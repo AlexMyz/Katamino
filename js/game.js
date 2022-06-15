@@ -1,5 +1,64 @@
-$(function(){
+//секундомір
+minutesCount = 0,secondCount = 0,centiSecondCount = 0
+minutes = document.getElementById('minutes')
+second = document.getElementById('second')
+//початок відрахунку
+function startSW(){
+	$("#pauseCount").removeAttr("disabled")
+	$("#resetCount").removeAttr("disabled")
+	$("#startCount").attr({"disabled":"disabled"})
+	minutesSetInterval = setInterval(function(){
+		minutesCount += 1
+		minutes.innerHTML = minutesCount
+	},60000);
+	secondSetInterval = setInterval(function(){
+		secondCount += 1
+		if(secondCount > 59){
+			secondCount = 1
+		}
+		second.innerHTML = secondCount
+	},1000);
+	centiSecondSetInterval = setInterval(function(){
+		centiSecondCount += 1
+		if(centiSecondCount > 99){
+			centiSecondCount = 1
+		}
+		centiSecond.innerHTML = centiSecondCount
+	},10);
+}
+//пауза
+function pauseSW(){
+	$("#startCount").removeAttr("disabled")
+	$("#pauseCount").attr({"disabled":"disabled"})
+	clearInterval(minutesSetInterval)
+	clearInterval(secondSetInterval)
+	clearInterval(centiSecondSetInterval)
+}
+//обнулення
+function restartSW(){
+	$("#pauseCount").attr({"disabled":"disabled"})
+	$("#resetCount").attr({"disabled":"disabled"})
+	$("#startCount").removeAttr("disabled")
 
+	clearInterval(minutesSetInterval)
+	clearInterval(secondSetInterval)
+	clearInterval(centiSecondSetInterval)
+	minutesCount = 0,secondCount = 0,centiSecondCount = 0
+	minutes.innerHTML = minutesCount
+	second.innerHTML = secondCount
+	centiSecond.innerHTML = centiSecondCount
+}
+// file = '';
+// function radioget(getValue) {
+// 	file = getValue;
+// 	console.log(file);
+// }
+$(function(){
+	$(".start-btn").click(function() {
+		$(".main").css('display','block');
+		$(".start-btn").css('display','none');
+		startSW();
+	});
 	const puzzle = []
 	const puzzleField = []
 
@@ -38,7 +97,9 @@ $(function(){
 
 	drawPuzzlesField()
 
-
+	
+	
+	// console.log(file);
 	// функция создания пазлов 
 	function createPuzzle() {
 		for (let i = 0; i < countPuzzles; i++) {
@@ -46,9 +107,8 @@ $(function(){
 		}
 
 		shuffle(puzzle)
-		
 		for (let i = 0; i < countPuzzles; i++) {
-			$('.puzzles-field').append($('<div></div>').addClass('cell-puzzle').attr('id', puzzle[i]).css('background', `url('./img/puzzle/pic2/${puzzle[i]}.jpg') 0 0/100% 100% no-repeat`))
+			$('.puzzles-field').append($('<div></div>').addClass('cell-puzzle').attr('id', puzzle[i]).css('background', `url('./img/puzzle/pic1/${puzzle[i]}.jpg') 0 0/100% 100% no-repeat`))
 		}
 	}
 
@@ -142,16 +202,14 @@ $(function(){
 	  		}
 
   		});
-
-  		win()
+  		win();
   	}
 
 
   	function win() {
   		let result = puzzleField.reduce((sum, current) => sum + current, 0);
   		if (result == countPuzzles) alert('W I N')
+		pauseSW;
   	}
-  	
-
 
 });

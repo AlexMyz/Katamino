@@ -36,6 +36,8 @@ include "configs/db.php";
 		</div>
 	</div>
 	<script src="/js/script.js"></script>
+	<script src="/js/parallax.js"></script>
+
 	
 </body>
 </html>
