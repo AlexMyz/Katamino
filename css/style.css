@@ -1,0 +1,86 @@
+body {
+    background-color: #96C3F8; 
+    /* background-image: url(/img/start-screen/bg.png); */
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+.fig {
+    position: absolute;
+    /* box-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1); */
+    background-color: #89B6EA;
+}
+
+.fig1 {
+    padding: 100px 100px;
+    top: 180px;
+    left: 250px;
+}
+.fig2 {
+    padding: 90px 90px;
+    top: 180px;
+    right: 250px;
+}
+.fig3 {
+    padding: 70px 70px;
+    top: -180px;
+    right: 240px;
+}
+.fig4 {
+
+    padding: 80px 80px;
+    top: -180px;
+    left: 200px;
+}
+.fig5 {
+    padding: 50px 50px;
+    top: -150px;
+    left: 600px;
+}
+.fig6 {
+    padding: 40px 40px;
+    bottom: -150px;
+    right: 600px;
+}
+.greet-scr {
+    position: relative;
+    width: 480px;
+    height: 180px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.game-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 240px;
+    text-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
+}
+
+.log-btns a{
+    cursor: pointer;
+    position: absolute;
+    font-family: 'Imprima', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 2px 3px 1px rgb(0, 0, 0, 0.1);
+    bottom: 0;
+}
+.log-btns a:hover {
+    bottom: 5px;
+    box-shadow: 8px 15px 4px rgb(0, 0, 0, 0.06);
+}
+.login-btn{
+    padding: 20px 70px;
+    left: 0;
+}
+.signin-btn {
+    padding: 20px 65px;
+    right: 0;
+}
