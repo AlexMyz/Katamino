@@ -38,11 +38,7 @@ function restartSW(){
 	minutes.innerHTML = minutesCount
 	second.innerHTML = secondCount
 }
-// file = '';
-// function radioget(getValue) {
-// 	file = getValue;
-// 	console.log(file);
-// }
+
 $(function(){
 	$(".start-btn").click(function() {
 		$(".main").css('display','block');

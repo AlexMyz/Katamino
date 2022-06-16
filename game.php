@@ -17,34 +17,6 @@
     <?php require("header.php") ?>
 
     <a href="#" class="btn start-btn">Почати</a>
-
-    <!-- <div class="levels">
-
-        <div class="lvl lvl-1">
-            <label>
-                <input type="radio" name="level" value="1" onchange="radioget($(this).val())">
-                <img src="/img/puzzle/pic1/bg.jpg" alt="" class="level-img">
-            </label>
-        </div>
-
-        <div class="lvl lvl-2">
-            <label>
-                <input type="radio" name="level" value="2" onchange="radioget($(this).val())">
-                <img src="/img/puzzle/pic2/bg.jpg" alt="" class="level-img">
-            </label>
-        </div>
-
-        <div class="lvl lvl-3">
-            <label>
-                <input type="radio" name="level" value="3" onchange="radioget($(this).val())">
-                <img src="/img/puzzle/pic3/bg.jpg" alt="" class="level-img">
-            </label>
-        </div>
-        <span></span>
-    </div> -->
-
-
-
     <div class="main">
         <div id="timer" class="text-center">
             <div class="countdown">
