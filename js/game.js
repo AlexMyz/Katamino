@@ -1,3 +1,46 @@
+
+//секундомір
+minutesCount = 0,secondCount = 0,
+minutes = document.getElementById('minutes')
+second = document.getElementById('second')
+//початок відрахунку
+function startSW(){
+	$("#pauseCount").removeAttr("disabled")
+	$("#resetCount").removeAttr("disabled")
+	$("#startCount").attr({"disabled":"disabled"})
+	minutesSetInterval = setInterval(function(){
+		minutesCount += 1
+		minutes.innerHTML = minutesCount
+	},60000);
+	secondSetInterval = setInterval(function(){
+		secondCount += 1
+		if(secondCount > 59){
+			secondCount = 1
+		}
+		second.innerHTML = secondCount
+	},1000);
+}
+//пауза
+function pauseSW(){
+	$("#startCount").removeAttr("disabled")
+	$("#pauseCount").attr({"disabled":"disabled"})
+	clearInterval(minutesSetInterval)
+	clearInterval(secondSetInterval)
+}
+//обнулення
+function restartSW(){
+	$("#pauseCount").attr({"disabled":"disabled"})
+	$("#resetCount").attr({"disabled":"disabled"})
+	$("#startCount").removeAttr("disabled")
+
+	clearInterval(minutesSetInterval)
+	clearInterval(secondSetInterval)
+	minutesCount = 0,secondCount = 0
+	minutes.innerHTML = minutesCount
+	second.innerHTML = secondCount
+}
+
+
 $(function () {
 
 	const puzzle = []
@@ -67,10 +110,12 @@ $(function () {
 				$('.main').append($('<button></button>').addClass('go-btn').text('GO'));
 
 				$(".go-btn").click(function () {
+					$('#timer').css('display','block');
+
 					goPuzzle()
+					startSW()
 				})
 			}
-
 			chosen = true;
 		})
 	}
@@ -240,9 +285,15 @@ $(function () {
 
 	function win() {
 		let result = puzzleField.reduce((sum, current) => sum + current, 0);
-		if (result == countPuzzles) alert('W I N')
+		if (result == countPuzzles) {
+			pauseSW();
+			$('.pyro').css('display','block');
+			alert('Ваш час: '+ minutes.innerHTML + ':' + second.innerHTML);
+			location.reload();
+		}
 	}
 
 
 
 });
+
